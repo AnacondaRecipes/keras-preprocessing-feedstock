@@ -13,6 +13,9 @@ source:
 build:
   number: 0
   script: python -m pip install --no-deps --ignore-installed .
+  # only build on platforms+python versions where tensorflow is available
+  skip: True  # [win32 or linux32]
+  skip: True  # [win64 and py27]
 
 requirements:
   host:
